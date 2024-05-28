@@ -8,7 +8,13 @@
     <title>Vue Email List</title>
 </head>
 <body>
-    <div id="app"></div>
+    <div id="app">
+        <div v-if="emails.length === 10">
+            <ul v-for="(emails, index) in emails" style="list-style-type: none;" :key="index">
+                <li>{{ emails }}</li>
+            </ul>
+        </div>
+    </div>
     <!-- Axios -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <!-- Vue -->
